@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+}
+
+body {
+	background-image: url("../img/rockBack.png");
+	height: 100vh;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tetris {
+	padding: 0.5vh;
+	background-color: black;
+	border: solid 4px royalblue;
+	border-radius: 0.5vh;
+	display: grid;
+	grid-template-columns: repeat(10, min(4vh, 7vw));
+	grid-template-rows: repeat(20, auto);
+}
+
+.tetris div {
+	--cell-size: min(4vh, 7vw);
+	height: var(--cell-size);
+	width: var(--cell-size);
+	border-radius: 0.3vh;
+	box-shadow: inset 2px 2px 2px rgba(8, 54, 27, 0.49);
+}
+
+.tetris .ghost {
+	background-color: rgba(4, 0, 255, 0.444);
+}
+
+.tetris .O,
+.tetris .L,
+.tetris .T,
+.tetris .Z,
+.tetris .I,
+.tetris .S,
+.tetris .J {
+	background-color: red;
+	box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.2),
+		inset -2px -2px 2px rgba(1, 8, 89, 0.2);
+}
